@@ -1,0 +1,77 @@
+COTIZADOR — CHRISTIAN BENEDICT FASEL GARCÍA  (App / PWA)
+========================================================
+
+Esta carpeta es la aplicación completa. Funciona SIN INTERNET
+(las librerías ya vienen incluidas). No requiere instalar nada.
+
+
+OPCIÓN 1 — USARLA YA (sin instalar)
+-----------------------------------
+1. Descomprime toda la carpeta en tu PC (mantén todos los archivos juntos).
+2. Haz doble clic en "index.html".
+Se abre en tu navegador y funciona igual, sin internet.
+
+
+OPCIÓN 2 — INSTALARLA COMO APP (ícono + ventana propia)
+-------------------------------------------------------
+Para que quede como una app de verdad (ícono en el escritorio o el
+celular, ventana propia, funciona offline), los archivos deben estar
+en un enlace https. Sube TODOS los archivos de esta carpeta a un
+hosting estático gratis: GitHub Pages, Cloudflare Pages o Netlify.
+
+Ya con el enlace https:
+
+  EN COMPUTADORA (Edge o Chrome):
+   1. Abre el enlace.
+   2. En la barra de direcciones aparece un ícono de "Instalar"
+      (o menú ⋯ → Aplicaciones → "Instalar este sitio como aplicación").
+   3. Confirma. Queda un ícono en el escritorio.
+
+  EN CELULAR:
+   - Android (Chrome): abre el enlace → menú ⋯ → "Instalar app".
+   - iPhone (Safari): abre el enlace → botón Compartir → "Agregar a inicio".
+
+
+CÓMO SE USA
+-----------
+1. Llena Cliente, Fecha y Ciudad. En "Datos adicionales" puedes poner
+   el contacto, el teléfono del cliente, la condición de pago y la validez.
+
+2. Agrega una línea por cada servicio. Cada línea tiene:
+     Cant.        → normalmente 1
+     Descripción  → el servicio (ej. "Constitución de S.R.L.")
+     Tipo         → Honorarios  ó  Gastos y tasas
+     Precio       → el monto, SIN ITBIS
+
+   HONORARIOS       = lo que cobras tú por tu trabajo.
+   GASTOS Y TASAS   = lo que se paga al Estado (ONAPI, DGII, Cámara de
+                      Comercio) y que tú solo trasladas al cliente.
+
+   Si usas los dos tipos, el PDF sale con dos bloques y su subtotal cada
+   uno, más el total general. Si todas las líneas son del mismo tipo,
+   sale como una sola tabla simple.
+
+3. "Descargar PDF" → el documento para enviarle al cliente.
+   "Descargar Excel" → la misma cotización en hoja de cálculo, para ti.
+
+
+IMPORTANTE SOBRE EL ITBIS
+-------------------------
+Los precios se escriben tal cual, SIN ITBIS. El PDF sale con esta nota
+impresa automáticamente:
+
+  "Los precios indicados NO incluyen ITBIS. No se emite comprobante
+   fiscal (NCF)."
+
+Cuando te formalices y tengas RNC, hay que ajustar la app para agregar
+la línea de ITBIS (18%) y el RNC en el encabezado.
+
+
+CONTENIDO DE LA CARPETA (no borres nada)
+----------------------------------------
+  index.html            La app
+  exceljs.min.js        Genera el Excel
+  jspdf.umd.min.js      Genera el PDF
+  manifest.json         Datos de la app (nombre, ícono)
+  sw.js                 Permite que funcione sin internet
+  icon-*.png            Íconos de la app
